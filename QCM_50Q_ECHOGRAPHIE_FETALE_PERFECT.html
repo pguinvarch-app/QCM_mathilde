@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏆 QCM 50 QUESTIONS ÉCHOGRAPHIE FŒTALE - FINAL</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:950px;margin:0 auto;padding:30px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#333;line-height:1.6}
+.quiz-container{background:white;border-radius:20px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,0.2);margin-bottom:40px}
+h1{text-align:center;color:#2d3748;font-size:2.5em;margin-bottom:15px;text-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.subtitle{text-align:center;color:#718096;font-size:1.2em;margin-bottom:30px;padding:20px;background:rgba(255,255,255,0.8);border-radius:15px}
+.score{text-align:center;font-size:2em;background:linear-gradient(135deg,#48bb78,#38a169);color:white;padding:25px;border-radius:20px;margin:30px 0;font-weight:600;box-shadow:0 15px 35px rgba(72,187,120,0.4)}
+.question{margin:25px 0;padding:25px;border:2px solid #e2e8f0;border-radius:15px;background:#f7fafc;transition:box-shadow 0.3s}
+.question:hover{box-shadow:0 10px 25px rgba(0,0,0,0.1)}
+.question h3{color:#2d3748;margin:0 0 20px 0;font-size:1.4em}
+.options{list-style:none;padding:0}
+.options li{margin:12px 0}
+.options label{display:flex;align-items:flex-start;padding:15px;border-radius:12px;cursor:pointer;transition:all 0.3s;border:2px solid transparent;font-size:1.1em}
+.options input[type="radio"]{margin:0 12px 0 0;flex-shrink:0;transform:scale(1.3);accent-color:#4299e1}
+.options label:hover{background:#ebf8ff;border-color:#bee3f8;transform:translateX(5px)}
+.btn{background:linear-gradient(135deg,#ed8936,#dd6b20);color:white;padding:18px 40px;border:none;border-radius:50px;font-size:1.2em;font-weight:600;cursor:pointer;display:block;margin:30px auto;transition:all 0.3s;box-shadow:0 10px 30px rgba(237,137,54,0.4)}
+.btn:hover{background:linear-gradient(135deg,#dd6b20,#c05621);transform:translateY(-3px);box-shadow:0 15px 40px rgba(237,137,54,0.6)}
+.btn-success{background:linear-gradient(135deg,#48bb78,#38a169)!important}
+.btn-secondary{background:linear-gradient(135deg,#a0aec0,#718096)!important}
+.btn-print{background:linear-gradient(135deg,#4299e1,#3182ce)!important}
+.result{margin-top:40px;padding:30px;background:linear-gradient(135deg,#f0fff4,#c6f6d5);border-radius:20px;border-left:6px solid #38a169;display:none;box-shadow:0 10px 30px rgba(72,187,120,0.2)}
+.feedback-correct{color:#38a169;font-size:1.4em;font-weight:bold;margin-bottom:15px} .feedback-wrong{color:#e53e3e;font-size:1.4em;font-weight:bold;margin-bottom:15px}
+.explication{background:rgba(255,255,255,0.8);padding:20px;border-radius:12px;margin:15px 0;border-left:5px solid #48bb78;font-style:italic}
+.options label.correct{background:#c6f6d5 !important;border-color:#38a169 !important;transform:scale(1.02)} .options label.wrong{background:#fed7d7 !important;border-color:#e53e3e !important}
+.progress{background:#e2e8f0;height:12px;border-radius:10px;margin:20px 0;overflow:hidden;box-shadow:inset 0 2px 4px rgba(0,0,0,0.1)} .progress-bar{background:linear-gradient(90deg,#48bb78,#34d399);height:100%;transition:width 0.8s ease;border-radius:10px}
+@media print{body{background:white;color:#000} .quiz-container{box-shadow:none;margin:10px} .btn{display:none}} 
+@media (max-width:768px){.question{padding:15px}.options label{font-size:1em;padding:12px}}
+</style>
+</head>
+<body>
+<div class="quiz-container">
+<h1>🏆 QCM 50 QUESTIONS ÉCHOGRAPHIE FŒTALE</h1>
+<div class="subtitle">
+<strong>Tous tes 9 cours</strong> | Corrections immédiates détaillées | Niveau ECNi/DFASM<br>
+<small>Doppler(8) Face(8) 3D(6) Thorax(5) SNC normal(8) Patho SNC(10) Digestif(3) CMV(2)</small>
+</div>
+
+<div class="score">
+Score: <span id="scoreValue">0</span>/50 
+<div class="progress"><div class="progress-bar" id="progress"></div></div>
+</div>
+
+<form id="quizForm">
+
+<div class="question" id="sect1">
+<h3>Q1: 1. Séquence examen 1ère étape ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q1" value="A"> A. Identification patiente</label></li><li><label><input type="radio" name="q1" value="B"> B. Nettoyage plateforme sondes</label></li><li><label><input type="radio" name="q1" value="C"> C. Choix sonde</label></li><li><label><input type="radio" name="q1" value="D"> D. Gain TGC</label></li></ul></div>
+<div class="question" id="sect2">
+<h3>Q2: 2. Résolution temporelle améliorée par ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q2" value="A"> A. Augmenter profondeur</label></li><li><label><input type="radio" name="q2" value="B"> B. Réduire angle/profondeur</label></li><li><label><input type="radio" name="q2" value="C"> C. Multiples focales</label></li><li><label><input type="radio" name="q2" value="D"> D. Basse fréquence</label></li></ul></div>
+<div class="question" id="sect3">
+<h3>Q3: 3. Haute fréquence avantage principal ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q3" value="A"> A. Grande pénétration</label></li><li><label><input type="radio" name="q3" value="B"> B. ↑ Résolution spatiale</label></li><li><label><input type="radio" name="q3" value="C"> C. ↓ Contraste</label></li><li><label><input type="radio" name="q3" value="D"> D. Moins aliasing</label></li></ul></div>
+<div class="question" id="sect4">
+<h3>Q4: 4. Aliasing Doppler couleur cause ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q4" value="A"> A. PRF trop haute</label></li><li><label><input type="radio" name="q4" value="B"> B. Vitesse flux > PRF</label></li><li><label><input type="radio" name="q4" value="C"> C. Gain trop bas</label></li><li><label><input type="radio" name="q4" value="D"> D. Filtre wall élevé</label></li></ul></div>
+<div class="question" id="sect5">
+<h3>Q5: 5. Doppler énergie vs couleur ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q5" value="A"> A. Donne direction flux</label></li><li><label><input type="radio" name="q5" value="B"> B. ↓ Dépendance angle</label></li><li><label><input type="radio" name="q5" value="C"> C. Vitesses très hautes</label></li><li><label><input type="radio" name="q5" value="D"> D. Moins sensible paroi</label></li></ul></div>
+<div class="question" id="sect6">
+<h3>Q6: 6. TGC définition ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q6" value="A"> A. Gain global image</label></li><li><label><input type="radio" name="q6" value="B"> B. Gain selon profondeur</label></li><li><label><input type="radio" name="q6" value="C"> C. Amélioration contraste</label></li><li><label><input type="radio" name="q6" value="D"> D. Zoom numérique</label></li></ul></div>
+<div class="question" id="sect7">
+<h3>Q7: 7. Angle insonation Doppler idéal ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q7" value="A"> A. 90°</label></li><li><label><input type="radio" name="q7" value="B"> B. <60° (verticaliser)</label></li><li><label><input type="radio" name="q7" value="C"> C. Exactement 45°</label></li><li><label><input type="radio" name="q7" value="D"> D. Aucun impact</label></li></ul></div>
+<div class="question" id="sect8">
+<h3>Q8: 8. Cadence image minimale acceptable ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q8" value="A"> A. 10 Hz</label></li><li><label><input type="radio" name="q8" value="B"> B. 20 Hz</label></li><li><label><input type="radio" name="q8" value="C"> C. 30 Hz</label></li><li><label><input type="radio" name="q8" value="D"> D. 50 Hz</label></li></ul></div>
+<div class="question" id="sect9">
+<h3>Q9: 9. Bourgeon fronto-nasal embryologie ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q9" value="A"> A. Mandibule entière</label></li><li><label><input type="radio" name="q9" value="B"> B. Lèvre/philtrum/palais primaire</label></li><li><label><input type="radio" name="q9" value="C"> C. Maxillaires latéraux</label></li><li><label><input type="radio" name="q9" value="D"> D. Pavillon oreille</label></li></ul></div>
+<div class="question" id="sect10">
+<h3>Q10: 10. Fente labiale isolée implique ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q10" value="A"> A. Palais toujours atteint</label></li><li><label><input type="radio" name="q10" value="B"> B. Arc alvéolaire/palais primaire intacts</label></li><li><label><input type="radio" name="q10" value="C"> C. Caryotype systématique</label></li><li><label><input type="radio" name="q10" value="D"> D. IMG automatique</label></li></ul></div>
+<div class="question" id="sect11">
+<h3>Q11: 11. Angle facial inférieur normal > ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q11" value="A"> A. 45°</label></li><li><label><input type="radio" name="q11" value="B"> B. 60°</label></li><li><label><input type="radio" name="q11" value="C"> C. 75°</label></li><li><label><input type="radio" name="q11" value="D"> D. 90°</label></li></ul></div>
+<div class="question" id="sect12">
+<h3>Q12: 12. Syndrome Pierre Robin triade ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q12" value="A"> A. Rétrognathie+glossoptose+fente palatine</label></li><li><label><input type="radio" name="q12" value="B"> B. Macroglossie+omphalocèle</label></li><li><label><input type="radio" name="q12" value="C"> C. Hypertélorisme+colobome</label></li><li><label><input type="radio" name="q12" value="D"> D. Front bombant+micromélie</label></li></ul></div>
+<div class="question" id="sect13">
+<h3>Q13: 13. DIO subjectif normal équivaut ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q13" value="A"> A. ½ œil entre orbites</label></li><li><label><input type="radio" name="q13" value="B"> B. 1 œil complet entre</label></li><li><label><input type="radio" name="q13" value="C"> C. 2 yeux entre</label></li><li><label><input type="radio" name="q13" value="D"> D. Contact orbites</label></li></ul></div>
+<div class="question" id="sect14">
+<h3>Q14: 14. Phénotype Binder caractérisé par ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q14" value="A"> A. Front fuyant marqué</label></li><li><label><input type="radio" name="q14" value="B"> B. Hypoplasie étage moyen face</label></li><li><label><input type="radio" name="q14" value="C"> C. Menton proéminent</label></li><li><label><input type="radio" name="q14" value="D"> D. Oreilles basses implantées</label></li></ul></div>
+<div class="question" id="sect15">
+<h3>Q15: 15. Intégrité palais osseux prouvée par ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q15" value="A"> A. Lèvre fendue</label></li><li><label><input type="radio" name="q15" value="B"> B. Bord postérieur visible</label></li><li><label><input type="radio" name="q15" value="C"> C. Luette présente</label></li><li><label><input type="radio" name="q15" value="D"> D. B et C</label></li></ul></div>
+<div class="question" id="sect16">
+<h3>Q16: 16. Syndrome Apert association ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q16" value="A"> A. Syndactylie mains moufles</label></li><li><label><input type="radio" name="q16" value="B"> B. RCIU sévère précoce</label></li><li><label><input type="radio" name="q16" value="C"> C. Microcéphalie T1</label></li><li><label><input type="radio" name="q16" value="D"> D. Polydactylie post-axiale</label></li></ul></div>
+<div class="question" id="sect17">
+<h3>Q17: 17. Mode volumique Plan A correspond à ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q17" value="A"> A. Vue d'avion C</label></li><li><label><input type="radio" name="q17" value="B"> B. Coupe 2D initiale</label></li><li><label><input type="radio" name="q17" value="C"> C. Plan coronal B</label></li><li><label><input type="radio" name="q17" value="D"> D. Rotation Z</label></li></ul></div>
+<div class="question" id="sect18">
+<h3>Q18: 18. Rotation X en 3D équivaut à ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q18" value="A"> A. Rotation kebab (Y)</label></li><li><label><input type="radio" name="q18" value="B"> B. Poulet à la broche</label></li><li><label><input type="radio" name="q18" value="C"> C. Machine à laver (Z)</label></li><li><label><input type="radio" name="q18" value="D"> D. Translation linéaire</label></li></ul></div>
+<div class="question" id="sect19">
+<h3>Q19: 19. OmniView particulièrement utile pour ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q19" value="A"> A. Analyse face fœtale</label></li><li><label><input type="radio" name="q19" value="B"> B. Rachis (suivi courbure)</label></li><li><label><input type="radio" name="q19" value="C"> C. Volume cardiaque STIC</label></li><li><label><input type="radio" name="q19" value="D"> D. Comptage folliculaire</label></li></ul></div>
+<div class="question" id="sect20">
+<h3>Q20: 20. SonoAVC application principale ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q20" value="A"> A. Rachis 3D</label></li><li><label><input type="radio" name="q20" value="B"> B. Quantification folliculaire/antrale</label></li><li><label><input type="radio" name="q20" value="C"> C. Cœur STIC</label></li><li><label><input type="radio" name="q20" value="D"> D. Face surface</label></li></ul></div>
+<div class="question" id="sect21">
+<h3>Q21: 21. VCI (Volume Contrast Imaging) ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q21" value="A"> A. Coupe fine haute résolution</label></li><li><label><input type="radio" name="q21" value="B"> B. Coupe épaisse 1-20mm</label></li><li><label><input type="radio" name="q21" value="C"> C. Rendu surfacique cutané</label></li><li><label><input type="radio" name="q21" value="D"> D. Mode osseux hyperéchogène</label></li></ul></div>
+<div class="question" id="sect22">
+<h3>Q22: 22. STIC acquisition spécifique ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q22" value="A"> A. Rachis OmniView</label></li><li><label><input type="radio" name="q22" value="B"> B. Cycle cardiaque fœtal complet</label></li><li><label><input type="radio" name="q22" value="C"> C. Face 3D surface</label></li><li><label><input type="radio" name="q22" value="D"> D. Follicules SonoAVC</label></li></ul></div>
+<div class="question" id="sect23">
+<h3>Q23: 23. Hernie diaphragmatique congénitale gauche représente ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q23" value="A"> A. 20%</label></li><li><label><input type="radio" name="q23" value="B"> B. 76%</label></li><li><label><input type="radio" name="q23" value="C"> C. 4%</label></li><li><label><input type="radio" name="q23" value="D"> D. 50%</label></li></ul></div>
+<div class="question" id="sect24">
+<h3>Q24: 24. LHR observé/attendu > ... bon pronostic HDC ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q24" value="A"> A. 15%</label></li><li><label><input type="radio" name="q24" value="B"> B. 25%</label></li><li><label><input type="radio" name="q24" value="C"> C. 45%</label></li><li><label><input type="radio" name="q24" value="D"> D. 60%</label></li></ul></div>
+<div class="question" id="sect25">
+<h3>Q25: 25. CVR définition biométrique ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q25" value="A"> A. Surface poumon/head ratio</label></li><li><label><input type="radio" name="q25" value="B"> B. Surface lésion/PC</label></li><li><label><input type="radio" name="q25" value="C"> C. Volume pulmonaire attendu</label></li><li><label><input type="radio" name="q25" value="D"> D. Thorax/cœur ratio</label></li></ul></div>
+<div class="question" id="sect26">
+<h3>Q26: 26. Séquestration pulmonaire signe Doppler spécifique ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q26" value="A"> A. Kystes multiples MAKP</label></li><li><label><input type="radio" name="q26" value="B"> B. Vascularisation artérielle aberrante</label></li><li><label><input type="radio" name="q26" value="C"> C. Inversion coupoles diaphragmatiques</label></li><li><label><input type="radio" name="q26" value="D"> D. Anasarque fœto-placentaire</label></li></ul></div>
+<div class="question" id="sect27">
+<h3>Q27: 27. Épanchement pleural fœtal incidence ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q27" value="A"> A. 1/1 000 grossesses</label></li><li><label><input type="radio" name="q27" value="B"> B. 1/15 000 grossesses</label></li><li><label><input type="radio" name="q27" value="C"> C. 1/2 500 naissances</label></li><li><label><input type="radio" name="q27" value="D"> D. 1/50 000</label></li></ul></div>
+<div class="question" id="sect28">
+<h3>Q28: 28. CNEOF T2/T3 : nombre coupes axiales cerveau ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q28" value="A"> A. 1 coupe BIP</label></li><li><label><input type="radio" name="q28" value="B"> B. 3 coupes (BIP-PC-fosse post)</label></li><li><label><input type="radio" name="q28" value="C"> C. 5 coupes complètes</label></li><li><label><input type="radio" name="q28" value="D"> D. Coupe sagittale systématique</label></li></ul></div>
+<div class="question" id="sect29">
+<h3>Q29: 29. Cavité septale largeur normale ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q29" value="A"> A. >15 mm pathologique</label></li><li><label><input type="radio" name="q29" value="B"> B. <9 mm normale</label></li><li><label><input type="radio" name="q29" value="C"> C. Toujours = V3</label></li><li><label><input type="radio" name="q29" value="D"> D. Disparaît T1</label></li></ul></div>
+<div class="question" id="sect30">
+<h3>Q30: 30. Ordre développement corps calleux 18-22SA ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q30" value="A"> A. Splenium → genou</label></li><li><label><input type="radio" name="q30" value="B"> B. Genou → corps → splenium</label></li><li><label><input type="radio" name="q30" value="C"> C. Vermis → V4 pont</label></li><li><label><input type="radio" name="q30" value="D"> D. Thalami → fornix</label></li></ul></div>
+<div class="question" id="sect31">
+<h3>Q31: 31. DTC transverse cervelet : 1mm/SA jusqu'à ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q31" value="A"> A. 18 SA</label></li><li><label><input type="radio" name="q31" value="B"> B. 24 SA</label></li><li><label><input type="radio" name="q31" value="C"> C. 32 SA</label></li><li><label><input type="radio" name="q31" value="D"> D. Fin grossesse</label></li></ul></div>
+<div class="question" id="sect32">
+<h3>Q32: 32. Grande citerne limite supérieure ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q32" value="A"> A. 5 mm</label></li><li><label><input type="radio" name="q32" value="B"> B. 10 mm</label></li><li><label><input type="radio" name="q32" value="C"> C. 15 mm</label></li><li><label><input type="radio" name="q32" value="D"> D. 20 mm</label></li></ul></div>
+<div class="question" id="sect33">
+<h3>Q33: 33. CLIP plexus choroïdes signification ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q33" value="A"> A. Pathologique systématique</label></li><li><label><input type="radio" name="q33" value="B"> B. Variante normale <26 SA</label></li><li><label><input type="radio" name="q33" value="C"> C. CMV obligatoire</label></li><li><label><input type="radio" name="q33" value="D"> D. Hydrocéphalie débutante</label></li></ul></div>
+<div class="question" id="sect34">
+<h3>Q34: 34. Fissure primaire vermis visible ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q34" value="A"> A. Jamais en 2D</label></li><li><label><input type="radio" name="q34" value="B"> B. T3 lobe ant/post</label></li><li><label><input type="radio" name="q34" value="C"> C. Toujours pathologique</label></li><li><label><input type="radio" name="q34" value="D"> D. IRM seule</label></li></ul></div>
+<div class="question" id="sect35">
+<h3>Q35: 35. Mesure carrefour ventriculaire seuil VM ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q35" value="A"> A. Bord-bord >10 mm</label></li><li><label><input type="radio" name="q35" value="B"> B. Plexus inclus</label></li><li><label><input type="radio" name="q35" value="C"> C. <10 mm toujours normal</label></li><li><label><input type="radio" name="q35" value="D"> D. T1 uniquement</label></li></ul></div>
+<div class="question" id="sect36">
+<h3>Q36: 36. Myéloméningocèle signe indirect majeur ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q36" value="A"> A. Macrocrânie progressive</label></li><li><label><input type="radio" name="q36" value="B"> B. Chiari 2 + cervelet banane</label></li><li><label><input type="radio" name="q36" value="C"> C. Polydactylie post-axiale</label></li><li><label><input type="radio" name="q36" value="D"> D. Hydrocéphalie isolée</label></li></ul></div>
+<div class="question" id="sect37">
+<h3>Q37: 37. Ventriculomégalie seuil diagnostic ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q37" value="A"> A. >8 mm</label></li><li><label><input type="radio" name="q37" value="B"> B. >10 mm</label></li><li><label><input type="radio" name="q37" value="C"> C. >12 mm</label></li><li><label><input type="radio" name="q37" value="D"> D. >15 mm</label></li></ul></div>
+<div class="question" id="sect38">
+<h3>Q38: 38. Anomalie Chiari 2 caractéristiques ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q38" value="A"> A. Grande citerne dilatée</label></li><li><label><input type="radio" name="q38" value="B"> B. Cervelet banane + V4 surélevé</label></li><li><label><input type="radio" name="q38" value="C"> C. Vermis complètement absent</label></li><li><label><input type="radio" name="q38" value="D"> D. DTC augmenté</label></li></ul></div>
+<div class="question" id="sect39">
+<h3>Q39: 39. Terminaison moelle épinière normale 32 SA ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q39" value="A"> A. L4</label></li><li><label><input type="radio" name="q39" value="B"> B. Plateau inférieur L2</label></li><li><label><input type="radio" name="q39" value="C"> C. S1</label></li><li><label><input type="radio" name="q39" value="D"> D. Coccyx</label></li></ul></div>
+<div class="question" id="sect40">
+<h3>Q40: 40. Holoprosencéphalie alobaire + face ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q40" value="A"> A. Proboscis (T13)</label></li><li><label><input type="radio" name="q40" value="B"> B. Cyclope</label></li><li><label><input type="radio" name="q40" value="C"> C. A et B</label></li><li><label><input type="radio" name="q40" value="D"> D. Fentes latérales</label></li></ul></div>
+<div class="question" id="sect41">
+<h3>Q41: 41. Agnosie corps calleux signe direct ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q41" value="A"> A. Colpocéphalie isolée</label></li><li><label><input type="radio" name="q41" value="B"> B. Coupe sagittale sans CC</label></li><li><label><input type="radio" name="q41" value="C"> C. Cavité septale présente</label></li><li><label><input type="radio" name="q41" value="D"> D. Gyration normale</label></li></ul></div>
+<div class="question" id="sect42">
+<h3>Q42: 42. Méningo-encéphalocèle souvent associée ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q42" value="A"> A. Syndrome Meckel-Gruber</label></li><li><label><input type="radio" name="q42" value="B"> B. Polydactylie + reins kystiques</label></li><li><label><input type="radio" name="q42" value="C"> C. A et B</label></li><li><label><input type="radio" name="q42" value="D"> D. Hémangiome différentiel</label></li></ul></div>
+<div class="question" id="sect43">
+<h3>Q43: 43. VM classification modérée ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q43" value="A"> A. 10-12 mm</label></li><li><label><input type="radio" name="q43" value="B"> B. 12-15 mm</label></li><li><label><input type="radio" name="q43" value="C"> C. >15 mm</label></li><li><label><input type="radio" name="q43" value="D"> D. <10 mm</label></li></ul></div>
+<div class="question" id="sect44">
+<h3>Q44: 44. Porencéphalie origine ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q44" value="A"> A. Ischémie/hémorragie parenchyme</label></li><li><label><input type="radio" name="q44" value="B"> B. Kyste plexus choroïde</label></li><li><label><input type="radio" name="q44" value="C"> C. VM isolée bénigne</label></li><li><label><input type="radio" name="q44" value="D"> D. Calcifications CMV</label></li></ul></div>
+<div class="question" id="sect45">
+<h3>Q45: 45. Diastématomyélie définition ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q45" value="A"> A. 2 hémimoelles + os médian</label></li><li><label><input type="radio" name="q45" value="B"> B. Filum terminal épais</label></li><li><label><input type="radio" name="q45" value="C"> C. Syringomyélie kystique</label></li><li><label><input type="radio" name="q45" value="D"> D. Méningocèle pure</label></li></ul></div>
+<div class="question" id="sect46">
+<h3>Q46: 46. Atrésie œsophagienne signes classiques ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q46" value="A"> A. Estomac normal visible</label></li><li><label><input type="radio" name="q46" value="B"> B. Absence estomac + polyhydramnios T2</label></li><li><label><input type="radio" name="q46" value="C"> C. Vessie systématiquement absente</label></li><li><label><input type="radio" name="q46" value="D"> D. Foie hyperéchogène</label></li></ul></div>
+<div class="question" id="sect47">
+<h3>Q47: 47. Agénésie vésicale conséquence majeure ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q47" value="A"> A. Polydactylie associée</label></li><li><label><input type="radio" name="q47" value="B"> B. Oligoamnios sévère dès T2</label></li><li><label><input type="radio" name="q47" value="C"> C. Macrocrânie fœtale</label></li><li><label><input type="radio" name="q47" value="D"> D. Omphalocèle systématique</label></li></ul></div>
+<div class="question" id="sect48">
+<h3>Q48: 48. Méconium iléal signe T2 ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q48" value="A"> A. Abdomen hyperéchogène + kystes</label></li><li><label><input type="radio" name="q48" value="B"> B. Vessie absente</label></li><li><label><input type="radio" name="q48" value="C"> C. Estomac dilaté chronique</label></li><li><label><input type="radio" name="q48" value="D"> D. Polypoïdie hépatique</label></li></ul></div>
+<div class="question" id="sect49">
+<h3>Q49: 49. Fœtopathie CMV signe T1 fréquent ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q49" value="A"> A. Microcéphalie</label></li><li><label><input type="radio" name="q49" value="B"> B. Calcifications ventriculaires</label></li><li><label><input type="radio" name="q49" value="C"> C. Hétérotopies nodules</label></li><li><label><input type="radio" name="q49" value="D"> D. Lissencéphalie</label></li></ul></div>
+<div class="question" id="sect50">
+<h3>Q50: 50. CMV T2 signes typiques ?</h3>
+<ul class="options">
+<li><label><input type="radio" name="q50" value="A"> A. Kystes périventriculaires germinatifs</label></li><li><label><input type="radio" name="q50" value="B"> B. Polydactylie post-axiale</label></li><li><label><input type="radio" name="q50" value="C"> C. Omphalocèle</label></li><li><label><input type="radio" name="q50" value="D"> D. Hémangiome cutané</label></li></ul></div>
+</form>
+
+<button class="btn" onclick="corrigerQuiz()">✅ CORRIGER QCM</button>
+<button class="btn btn-secondary" onclick="resetQuiz()" style="margin-left:10px">🔄 Recommencer</button>
+<button class="btn btn-print" onclick="window.print()">🖨️ Exporter PDF</button>
+
+<div id="corrections" class="result"></div>
+</div>
+
+<script>
+const questionsData = [{'q': '1. Séquence examen 1ère étape ?', 'options': ['A. Identification patiente', 'B. Nettoyage plateforme sondes', 'C. Choix sonde', 'D. Gain TGC'], 'reponse': 'B', 'explication': 'Nettoyage obligatoire avant chaque examen [file:5]'}, {'q': '2. Résolution temporelle améliorée par ?', 'options': ['A. Augmenter profondeur', 'B. Réduire angle/profondeur', 'C. Multiples focales', 'D. Basse fréquence'], 'reponse': 'B', 'explication': '↓ profondeur/angle → ↑ cadence image ≥20Hz [file:5]'}, {'q': '3. Haute fréquence avantage principal ?', 'options': ['A. Grande pénétration', 'B. ↑ Résolution spatiale', 'C. ↓ Contraste', 'D. Moins aliasing'], 'reponse': 'B', 'explication': '↑ Fréquence = ↑ résolution axiale/latérale [file:5]'}, {'q': '4. Aliasing Doppler couleur cause ?', 'options': ['A. PRF trop haute', 'B. Vitesse flux > PRF', 'C. Gain trop bas', 'D. Filtre wall élevé'], 'reponse': 'B', 'explication': 'Vitesse dépasse PRF sélectionnée [file:5]'}, {'q': '5. Doppler énergie vs couleur ?', 'options': ['A. Donne direction flux', 'B. ↓ Dépendance angle', 'C. Vitesses très hautes', 'D. Moins sensible paroi'], 'reponse': 'B', 'explication': 'Meilleure pour flux lents/capillaires [file:5]'}, {'q': '6. TGC définition ?', 'options': ['A. Gain global image', 'B. Gain selon profondeur', 'C. Amélioration contraste', 'D. Zoom numérique'], 'reponse': 'B', 'explication': 'Time Gain Control compense atténuation [file:5]'}, {'q': '7. Angle insonation Doppler idéal ?', 'options': ['A. 90°', 'B. <60° (verticaliser)', 'C. Exactement 45°', 'D. Aucun impact'], 'reponse': 'B', 'explication': 'Minimiser angle pour cosθ maximum [file:5]'}, {'q': '8. Cadence image minimale acceptable ?', 'options': ['A. 10 Hz', 'B. 20 Hz', 'C. 30 Hz', 'D. 50 Hz'], 'reponse': 'B', 'explication': '≥20 images/seconde résolution temporelle [file:5]'}, {'q': '9. Bourgeon fronto-nasal embryologie ?', 'options': ['A. Mandibule entière', 'B. Lèvre/philtrum/palais primaire', 'C. Maxillaires latéraux', 'D. Pavillon oreille'], 'reponse': 'B', 'explication': 'Lèvre sup, philtrum, 4 incisives, palais primaire [file:7]'}, {'q': '10. Fente labiale isolée implique ?', 'options': ['A. Palais toujours atteint', 'B. Arc alvéolaire/palais primaire intacts', 'C. Caryotype systématique', 'D. IMG automatique'], 'reponse': 'B', 'explication': 'Lèvre intacte = palais primaire intact [file:7]'}, {'q': '11. Angle facial inférieur normal > ?', 'options': ['A. 45°', 'B. 60°', 'C. 75°', 'D. 90°'], 'reponse': 'B', 'explication': '≥60° tous termes (signe Althäuser) [file:7]'}, {'q': '12. Syndrome Pierre Robin triade ?', 'options': ['A. Rétrognathie+glossoptose+fente palatine', 'B. Macroglossie+omphalocèle', 'C. Hypertélorisme+colobome', 'D. Front bombant+micromélie'], 'reponse': 'A', 'explication': 'Rétrognathie, glossoptose, fente Uvulaire [file:7]'}, {'q': '13. DIO subjectif normal équivaut ?', 'options': ['A. ½ œil entre orbites', 'B. 1 œil complet entre', 'C. 2 yeux entre', 'D. Contact orbites'], 'reponse': 'B', 'explication': '1 œil entre orbites normales [file:7]'}, {'q': '14. Phénotype Binder caractérisé par ?', 'options': ['A. Front fuyant marqué', 'B. Hypoplasie étage moyen face', 'C. Menton proéminent', 'D. Oreilles basses implantées'], 'reponse': 'B', 'explication': 'Maxillaire aplati, OPN verticalisées [file:7]'}, {'q': '15. Intégrité palais osseux prouvée par ?', 'options': ['A. Lèvre fendue', 'B. Bord postérieur visible', 'C. Luette présente', 'D. B et C'], 'reponse': 'D', 'explication': 'Bord post palais + luette = intact [file:7]'}, {'q': '16. Syndrome Apert association ?', 'options': ['A. Syndactylie mains moufles', 'B. RCIU sévère précoce', 'C. Microcéphalie T1', 'D. Polydactylie post-axiale'], 'reponse': 'A', 'explication': 'Craniosténose bicoronale + syndactylie [file:7]'}, {'q': '17. Mode volumique Plan A correspond à ?', 'options': ["A. Vue d'avion C", 'B. Coupe 2D initiale', 'C. Plan coronal B', 'D. Rotation Z'], 'reponse': 'B', 'explication': 'Plan A = coupe bidimensionnelle référence [file:8]'}, {'q': '18. Rotation X en 3D équivaut à ?', 'options': ['A. Rotation kebab (Y)', 'B. Poulet à la broche', 'C. Machine à laver (Z)', 'D. Translation linéaire'], 'reponse': 'B', 'explication': 'Rotation horizontale axe X [file:8]'}, {'q': '19. OmniView particulièrement utile pour ?', 'options': ['A. Analyse face fœtale', 'B. Rachis (suivi courbure)', 'C. Volume cardiaque STIC', 'D. Comptage folliculaire'], 'reponse': 'B', 'explication': "Droule rachis jusqu'à 3 lignes coupe [file:8]"}, {'q': '20. SonoAVC application principale ?', 'options': ['A. Rachis 3D', 'B. Quantification folliculaire/antrale', 'C. Cœur STIC', 'D. Face surface'], 'reponse': 'B', 'explication': 'Comptage/volume follicules automatique [file:8]'}, {'q': '21. VCI (Volume Contrast Imaging) ?', 'options': ['A. Coupe fine haute résolution', 'B. Coupe épaisse 1-20mm', 'C. Rendu surfacique cutané', 'D. Mode osseux hyperéchogène'], 'reponse': 'B', 'explication': 'Améliore contraste coupes épaisses [file:8]'}, {'q': '22. STIC acquisition spécifique ?', 'options': ['A. Rachis OmniView', 'B. Cycle cardiaque fœtal complet', 'C. Face 3D surface', 'D. Follicules SonoAVC'], 'reponse': 'B', 'explication': 'Spatial-Temporal Image Correlation cœur [file:8]'}, {'q': '23. Hernie diaphragmatique congénitale gauche représente ?', 'options': ['A. 20%', 'B. 76%', 'C. 4%', 'D. 50%'], 'reponse': 'B', 'explication': '76% gauche, 20% droite, 4% bilatérale [file:1]'}, {'q': '24. LHR observé/attendu > ... bon pronostic HDC ?', 'options': ['A. 15%', 'B. 25%', 'C. 45%', 'D. 60%'], 'reponse': 'C', 'explication': '>45% = bon pronostic hernie diaphragmatique [file:1]'}, {'q': '25. CVR définition biométrique ?', 'options': ['A. Surface poumon/head ratio', 'B. Surface lésion/PC', 'C. Volume pulmonaire attendu', 'D. Thorax/cœur ratio'], 'reponse': 'B', 'explication': 'Congenital lesion Volume Ratio = lésion/périmètre crânien [file:1]'}, {'q': '26. Séquestration pulmonaire signe Doppler spécifique ?', 'options': ['A. Kystes multiples MAKP', 'B. Vascularisation artérielle aberrante', 'C. Inversion coupoles diaphragmatiques', 'D. Anasarque fœto-placentaire'], 'reponse': 'B', 'explication': 'Artère systémique aberrante vers masse [file:1]'}, {'q': '27. Épanchement pleural fœtal incidence ?', 'options': ['A. 1/1 000 grossesses', 'B. 1/15 000 grossesses', 'C. 1/2 500 naissances', 'D. 1/50 000'], 'reponse': 'B', 'explication': '1/15 000 grossesses, garçons > filles [file:1]'}, {'q': '28. CNEOF T2/T3 : nombre coupes axiales cerveau ?', 'options': ['A. 1 coupe BIP', 'B. 3 coupes (BIP-PC-fosse post)', 'C. 5 coupes complètes', 'D. Coupe sagittale systématique'], 'reponse': 'B', 'explication': '3 coupes obligatoires : BIP, PC, fosse postérieure [file:11]'}, {'q': '29. Cavité septale largeur normale ?', 'options': ['A. >15 mm pathologique', 'B. <9 mm normale', 'C. Toujours = V3', 'D. Disparaît T1'], 'reponse': 'B', 'explication': 'Largeur <9mm, forme quadrangulaire [file:11]'}, {'q': '30. Ordre développement corps calleux 18-22SA ?', 'options': ['A. Splenium → genou', 'B. Genou → corps → splenium', 'C. Vermis → V4 pont', 'D. Thalami → fornix'], 'reponse': 'B', 'explication': 'Genou-corps-isthme-splenium-rostrum [file:11]'}, {'q': "31. DTC transverse cervelet : 1mm/SA jusqu'à ?", 'options': ['A. 18 SA', 'B. 24 SA', 'C. 32 SA', 'D. Fin grossesse'], 'reponse': 'B', 'explication': "DTC fiable datation jusqu'à 24 SA [file:11]"}, {'q': '32. Grande citerne limite supérieure ?', 'options': ['A. 5 mm', 'B. 10 mm', 'C. 15 mm', 'D. 20 mm'], 'reponse': 'B', 'explication': '≤10 mm arrière hémisphères cérébelleux [file:11]'}, {'q': '33. CLIP plexus choroïdes signification ?', 'options': ['A. Pathologique systématique', 'B. Variante normale <26 SA', 'C. CMV obligatoire', 'D. Hydrocéphalie débutante'], 'reponse': 'B', 'explication': 'Collections liquidiennes intra-plexus régressent [file:11]'}, {'q': '34. Fissure primaire vermis visible ?', 'options': ['A. Jamais en 2D', 'B. T3 lobe ant/post', 'C. Toujours pathologique', 'D. IRM seule'], 'reponse': 'B', 'explication': 'Fissure primaire sépare lobes T3 [file:11]'}, {'q': '35. Mesure carrefour ventriculaire seuil VM ?', 'options': ['A. Bord-bord >10 mm', 'B. Plexus inclus', 'C. <10 mm toujours normal', 'D. T1 uniquement'], 'reponse': 'A', 'explication': 'Bord-bord >10 mm = ventriculomégalie [file:11]'}, {'q': '36. Myéloméningocèle signe indirect majeur ?', 'options': ['A. Macrocrânie progressive', 'B. Chiari 2 + cervelet banane', 'C. Polydactylie post-axiale', 'D. Hydrocéphalie isolée'], 'reponse': 'B', 'explication': 'Cervelet banane plaqué + V4 comprimé [file:12]'}, {'q': '37. Ventriculomégalie seuil diagnostic ?', 'options': ['A. >8 mm', 'B. >10 mm', 'C. >12 mm', 'D. >15 mm'], 'reponse': 'B', 'explication': 'Carrefour ventriculaire ≥10 mm [file:12]'}, {'q': '38. Anomalie Chiari 2 caractéristiques ?', 'options': ['A. Grande citerne dilatée', 'B. Cervelet banane + V4 surélevé', 'C. Vermis complètement absent', 'D. DTC augmenté'], 'reponse': 'B', 'explication': 'Spina bifida ouvert : fuite LCR [file:12]'}, {'q': '39. Terminaison moelle épinière normale 32 SA ?', 'options': ['A. L4', 'B. Plateau inférieur L2', 'C. S1', 'D. Coccyx'], 'reponse': 'B', 'explication': 'Extrémité moelle plateau inf L2 [file:12]'}, {'q': '40. Holoprosencéphalie alobaire + face ?', 'options': ['A. Proboscis (T13)', 'B. Cyclope', 'C. A et B', 'D. Fentes latérales'], 'reponse': 'C', 'explication': 'Vésicule unique + anomalies cyclopiques [file:12]'}, {'q': '41. Agnosie corps calleux signe direct ?', 'options': ['A. Colpocéphalie isolée', 'B. Coupe sagittale sans CC', 'C. Cavité septale présente', 'D. Gyration normale'], 'reponse': 'B', 'explication': 'Absence CC + plis radiaux face interne [file:12]'}, {'q': '42. Méningo-encéphalocèle souvent associée ?', 'options': ['A. Syndrome Meckel-Gruber', 'B. Polydactylie + reins kystiques', 'C. A et B', 'D. Hémangiome différentiel'], 'reponse': 'C', 'explication': 'Occipital + polydactylie post-axiale [file:12]'}, {'q': '43. VM classification modérée ?', 'options': ['A. 10-12 mm', 'B. 12-15 mm', 'C. >15 mm', 'D. <10 mm'], 'reponse': 'B', 'explication': '12-15 mm = ventriculomégalie modérée [file:12]'}, {'q': '44. Porencéphalie origine ?', 'options': ['A. Ischémie/hémorragie parenchyme', 'B. Kyste plexus choroïde', 'C. VM isolée bénigne', 'D. Calcifications CMV'], 'reponse': 'A', 'explication': 'Destruction parenchymateuse cavité [file:12]'}, {'q': '45. Diastématomyélie définition ?', 'options': ['A. 2 hémimoelles + os médian', 'B. Filum terminal épais', 'C. Syringomyélie kystique', 'D. Méningocèle pure'], 'reponse': 'A', 'explication': 'Diastématomyélie = 2 moelles séparées [file:12]'}, {'q': '46. Atrésie œsophagienne signes classiques ?', 'options': ['A. Estomac normal visible', 'B. Absence estomac + polyhydramnios T2', 'C. Vessie systématiquement absente', 'D. Foie hyperéchogène'], 'reponse': 'B', 'explication': 'Absence image gastrique + hydramnios [file:9]'}, {'q': '47. Agénésie vésicale conséquence majeure ?', 'options': ['A. Polydactylie associée', 'B. Oligoamnios sévère dès T2', 'C. Macrocrânie fœtale', 'D. Omphalocèle systématique'], 'reponse': 'B', 'explication': 'Absence vessie → oligoamnios précoce [file:9]'}, {'q': '48. Méconium iléal signe T2 ?', 'options': ['A. Abdomen hyperéchogène + kystes', 'B. Vessie absente', 'C. Estomac dilaté chronique', 'D. Polypoïdie hépatique'], 'reponse': 'A', 'explication': 'Abdomen échogène + petites cystes [file:9]'}, {'q': '49. Fœtopathie CMV signe T1 fréquent ?', 'options': ['A. Microcéphalie', 'B. Calcifications ventriculaires', 'C. Hétérotopies nodules', 'D. Lissencéphalie'], 'reponse': 'A', 'explication': 'Microcéphalie précoce caractéristique [file:6]'}, {'q': '50. CMV T2 signes typiques ?', 'options': ['A. Kystes périventriculaires germinatifs', 'B. Polydactylie post-axiale', 'C. Omphalocèle', 'D. Hémangiome cutané'], 'reponse': 'A', 'explication': 'Kystes germinatifs + calcifications [file:6]'}];
+let totalQ = questionsData.length;
+
+function corrigerQuiz() {{
+    let score = 0;
+    let html = "";
+
+    questionsData.forEach((q, index) => {{
+        let qn = index + 1;
+        let radios = document.querySelectorAll(`input[name="q${qn}"]:checked`);
+        let userRep = radios.length > 0 ? radios[0].value : null;
+        let bonneRep = q.reponse;
+        let correct = userRep === bonneRep;
+
+        if (correct) score++;
+
+        // Marquer visuellement
+        document.querySelectorAll(`#sect${qn} label`).forEach(label => {{
+            let val = label.querySelector("input").value;
+            if (val === bonneRep) label.classList.add("correct");
+            else if (val === userRep && !correct) label.classList.add("wrong");
+        }});
+
+        let status = correct ? "✅ CORRECT !" : "❌ FAUX";
+        let colorClass = correct ? "feedback-correct" : "feedback-wrong";
+        html += `
+            <div>
+                <div class="${colorClass}">
+                    <strong>Q${qn}:</strong> ${status} <strong>${bonneRep}</strong>
+                </div>
+                <div class="explication">${q.explication}</div>
+            </div>
+            <hr style="margin:20px 0">
+        `;
+    }});
+
+    document.getElementById("scoreValue").textContent = score;
+    document.getElementById("progress").style.width = `${(score/totalQ)*100}%`;
+    document.getElementById("corrections").innerHTML = `<h3 style="color:#2d3748;margin-bottom:20px">📊 RÉSULTATS : ${score}/${totalQ}</h3>` + html;
+    document.getElementById("corrections").style.display = "block";
+    document.getElementById("corrections").scrollIntoView({{behavior:"smooth"}});
+}}
+
+function resetQuiz() {{
+    document.getElementById("quizForm").reset();
+    document.getElementById("corrections").style.display = "none";
+    document.querySelectorAll("label").forEach(l => l.classList.remove("correct", "wrong"));
+    document.getElementById("scoreValue").textContent = "0";
+    document.getElementById("progress").style.width = "0%";
+}}
+console.log("QCM 50Q chargé OK - Clique CORRIGER !");
+</script>
+</body>
+</html>
